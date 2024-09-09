@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Work Hours Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            width: 300px;
+            height: 360px;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        label,
+        p {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        input {
+            margin: 5px 0;
+            padding: 8px;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        .time-input {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .time-input input {
+            width: 45%;
+            /* Width for each hour and minute input */
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Work Hours Tracker</h2>
+
+    <!-- Input for Current Time -->
+    <label for="currentHours">Enter Last Tracked Time:</label>
+    <div class="time-input">
+        <input type="number" id="currentHours" placeholder="HH" min="0" max="23">
+        <input type="number" id="currentMinutes" placeholder="MM" min="0" max="59">
+    </div>
+    <br><br>
+    <!-- Input for Effective Working Hours -->
+    <label for="hours">Enter Completed Hours and Minutes:</label>
+    <div class="time-input">
+        <input type="number" id="hours" placeholder="HH" min="0" max="8">
+        <input type="number" id="minutes" placeholder="MM" min="0" max="59">
+    </div>
+
+    <p id="remainingHours"></p>
+    <p id="endTime"></p>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
